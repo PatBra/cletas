@@ -2,9 +2,8 @@ const app = require("./app");
 const connectDatabase = require("./config/database");
 
 const dotenv = require("dotenv");
-
-const mongoose = require("mongoose");
-mongoose.set("strictQuery", true);
+const mongoose = require('mongoose');
+mongoose.set('strictQuery', true);
 
 // Handle Uncaught exceptions
 process.on("uncaughtException", (err) => {
