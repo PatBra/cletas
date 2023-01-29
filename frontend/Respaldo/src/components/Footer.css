@@ -1,0 +1,34 @@
+footer div {
+    color: white;
+}
+
+footer link {
+    color: white;
+}
+
+/* Footer */
+.colorfb {
+    color: #3b5998;
+  }
+  
+  .colortw {
+    color: #4a78f6;
+  }
+  
+  .colorig {
+    color: #ac2bac;
+  }
+  
+  /*Footer efectos hover*/
+  .colorfb:hover {
+    color: #0065fd;
+  }
+  
+  .colortw:hover {
+    color: #4aa9f6;
+  }
+  
+  .colorig:hover {
+    color: #ed38ed;
+  }
+  
