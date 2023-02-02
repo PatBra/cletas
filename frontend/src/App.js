@@ -7,8 +7,6 @@ import Footer from './components/layout/Footer';
 
 function App() {
   return (
-
-   
       <div className='App'>
         <NavBar />
         <div className="container container-fluid">
@@ -18,8 +16,6 @@ function App() {
         </div>
         <Footer />
       </div>
- 
-
   );
 }
 

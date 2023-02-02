@@ -1,10 +1,12 @@
 //import { Link } from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import MetaData from '../components/layout/MetaData';
 
 const Home = () => {
     return (
         <div>
+            <MetaData title ={`El mega titulo`}/>
             {/* <div className='col-12 col-md-9 col-lg-7 col-xl-6 pt-5 px-5'>
                     <div className='container-fluid py-5 mt-5 px-3'>
                         <h1 className='fw-bold'>Visitanos</h1>
@@ -30,8 +32,6 @@ const Home = () => {
             </div>
 
 
-
-
             <div>
                 <h1 className='text-center fw-bold pt-5' id='bicicletas'>Bicicletas</h1>
                 <Card style={{ width: '18rem' }}>
@@ -49,21 +49,6 @@ const Home = () => {
                     </Card.Body>
                 </Card>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
     );
 }
