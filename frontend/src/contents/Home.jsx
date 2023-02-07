@@ -1,9 +1,18 @@
 //import { Link } from 'react-router-dom'
+import React, { useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import MetaData from '../components/layout/MetaData';
+import { useDispatch, useSelector } from 'react-redux'
+import { getProducts } from '../actions/product.Actions'
 
 const Home = () => {
+    const dispatch =useDispatch()
+
+    useEffect (()=>{
+dispatch(getProducts())
+    }, [dispatch])
+
     return (
         <div>
             <MetaData title ={`El mega titulo`}/>
