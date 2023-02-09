@@ -26,8 +26,9 @@ const server = app.listen(process.env.PORT, () => {
 });
 
 // Handle Unhundle
-process.on("unhandledRjection", (err) => {
-  console.log(`ERROR: ${err.message}`);
+process.on("unhandledRejection", (err) => {
+  //console.log(`ERROR: ${err.message}`);
+  console.log(`ERROR: ${err.stack}`);
   console.log("Servidor caido por una promesa no manejada");
   server.close(() => {
     process.exit(1);
