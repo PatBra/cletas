@@ -7,29 +7,17 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getProducts } from '../actions/product.Actions'
 
 const Home = () => {
-    const dispatch =useDispatch()
+    const dispatch = useDispatch()
+    const { loading, products, error, productsCount } = useSelector(state => state.products)
 
-    useEffect (()=>{
-dispatch(getProducts())
+    useEffect(() => {
+        dispatch(getProducts())
     }, [dispatch])
 
     return (
         <div>
-            <MetaData title ={`El mega titulo`}/>
-            {/* <div className='col-12 col-md-9 col-lg-7 col-xl-6 pt-5 px-5'>
-                    <div className='container-fluid py-5 mt-5 px-3'>
-                        <h1 className='fw-bold'>Visitanos</h1>
-                        <p className='pt-2'>
-                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio consequatur quis quasi suscipit nihil! Laboriosam pariatur, eius sed ipsum debitis ratione repellendus deserunt eum quo molestias asperiores tempora, mollitia nobis?
-                        </p>
-                    </div>
-                    <div className='botoncitojt'>
-                        <Link to='/Inicio'>
-                            <button className='btn btn-warning btn-lg mt-5 m b-5 fw-bold rounded-pill'>Catalogo</button>
-                        </Link>
-                    </div>
-                
-                </div> */}
+            <MetaData title={`El mega titulo`} />
+
             <div className='row jumbito'>
                 <div className='col-12 col-md-9 col-lg-7 col-xl-6'>
                     <div className='container-fluid py-5 mt-5 text-black-50 px-3'>
@@ -43,20 +31,29 @@ dispatch(getProducts())
 
             <div>
                 <h1 className='text-center fw-bold pt-5' id='bicicletas'>Bicicletas</h1>
-                <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src="#" />
-                    <Card.Body>
-                        <Card.Title>Card Title</Card.Title>
-                        <Card.Text>
-                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ut dignissimos voluptatem reprehenderit nobis quo velit, placeat nostrum alias itaque totam deserunt rerum veniam magni porro dolorum provident excepturi eligendi.
-                        </Card.Text>
-                        <Button variant="primary">Ver</Button>
-                        <Button variant="primary">Agregar al Carrito</Button>
-                        <Card.Text>
-                            Precio
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
+                <section id='products' className='container mt-5'>
+                    <div className='row'>
+                        {products && products.map(product => (
+                            <div key={product._id} className='col-sm-12 col-md-6 col-lg-3 my-3'>
+                                <Card style={{ width: '18rem' }}>
+                                    <Card.Img variant="top" src="https://devinci-media-prod.azureedge.net/media/amvgpag4/wilson_2022_v2.png?center=0.5,0.5&mode=max&bgcolor=FFFFFF&format=jpeg&width=1800&height=768" />
+                                    <Card.Body>
+                                        <img src={product.images[0].url} alt="wilson" className='card-img-top mx-auto' />
+                                        <Card.Title><a>{product.name}</a></Card.Title>
+                                        <Card.Text>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ut dignissimos voluptatem reprehenderit nobis quo velit, placeat nostrum alias itaque totam deserunt rerum veniam magni porro dolorum provident excepturi eligendi.
+                                        </Card.Text>
+                                        <Button variant="primary">Ver</Button>
+                                        <Button variant="primary">Agregar al Carrito</Button>
+                                        <Card.Text>
+                                            Precio
+                                        </Card.Text>
+                                    </Card.Body>
+                                </Card>
+                            </div>
+                        ))}
+                    </div>
+                </section>
             </div>
         </div>
     );
