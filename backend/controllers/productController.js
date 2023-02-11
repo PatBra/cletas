@@ -25,12 +25,14 @@ exports.getProducts = catchAsyncErrors(async (req, res, next) => {
 
   const products = await apiFeatures.query;
 
-  res.status(200).json({
-    success: true,
-    count: products.length,
-    productsCount,
-    products,
-  });
+  setTimeout(() => {
+    res.status(200).json({
+      success: true,
+      count: products.length,
+      productsCount,
+      products,
+    });
+  }, 2000);
 });
 
 // Obtener un solo producto   =>   /api/v1/product/:id

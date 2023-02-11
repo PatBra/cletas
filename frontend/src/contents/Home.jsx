@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getProducts } from '../actions/product.Actions'
 import Product from '../components/products/Product';
 import { Fragment } from 'react';
+import Loader from '../components/layout/Loader';
 
 const Home = () => {
     const dispatch = useDispatch()
@@ -16,7 +17,7 @@ const Home = () => {
 
     return (
         <Fragment>
-            {loading ? <h1>Cargando...</h1> : (
+            {loading ? <Loader /> : (
                 <div>
                     <MetaData title={`El mega titulo`} />
                     <div className='row jumbito'>
