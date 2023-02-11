@@ -13,6 +13,7 @@ const productSchema = new mongoose.Schema({
     maxLength: [5, "El precio no puede ser mayor de 99.999"],
     default: 0.0,
   },
+  
   description: {
     type: String,
     required: [true, "Ingrese la descripción del producto"],

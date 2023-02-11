@@ -5,7 +5,7 @@ const dotenv = require("dotenv");
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', true);
 
-// Handle Uncaught exceptions
+// Handle Uncaught exceptions 
 process.on("uncaughtException", (err) => {
   console.log(`ERROR: ${err.stack}`);
   console.log("Servidor apagado debido a una excepcion no controlada");
