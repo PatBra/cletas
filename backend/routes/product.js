@@ -16,3 +16,4 @@ router.route("/admin/product/new").post(newProduct);
 router.route("/admin/product/:id").put(updateProduct).delete(deleteProduct);
 
 module.exports = router;
+

@@ -5,7 +5,7 @@ const errorMiddleware = require("./middlewares/errors");
 
 app.use(express.json());
 
-//rutas
+//rutas 
 const products = require("./routes/product");
 const auth = require("./routes/auth");
 
