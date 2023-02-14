@@ -1,5 +1,5 @@
 import React from "react";
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
@@ -23,7 +23,7 @@ const Product = ({ product }) => {
                         <span id='no_of_reviews'>({product.numOfReviews})</span>
                     </div>
                     <Card.Text>
-                        <p>${product.price}</p>
+                        <span>${product.price}</span>
                     </Card.Text>
                 </Card.Body>
             </Card>
