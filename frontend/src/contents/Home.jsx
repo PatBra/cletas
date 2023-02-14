@@ -5,18 +5,24 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getProducts } from '../actions/product.Actions'
 import Product from '../components/products/Product';
 import { Fragment } from 'react';
+import Loader from '../components/layout/Loader';
+import { useAlert } from 'react-alert';
 
 const Home = () => {
-    const dispatch = useDispatch()
+    const alert = useAlert();
+    const dispatch = useDispatch();
     const { loading, products, error, productsCount } = useSelector(state => state.products)
 
     useEffect(() => {
-        dispatch(getProducts())
-    }, [dispatch])
+        if(error) {
+           return alert.error(error)
+        }
+        dispatch(getProducts());
+    }, [dispatch, alert, error])
 
     return (
         <Fragment>
-            {loading ? <h1>Cargando...</h1> : (
+            {loading ? <Loader /> : (
                 <div>
                     <MetaData title={`El mega titulo`} />
                     <div className='row jumbito'>
