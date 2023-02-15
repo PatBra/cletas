@@ -5,6 +5,7 @@ import Home from './contents/Home'
 import NavBar from './components/layout/NavBar';
 import Footer from './components/layout/Footer';
 import ProductDetails from './components/products/Product.Details';
+import './App.css';
 
 function App() {
   return (
