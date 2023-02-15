@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './contents/Home'
 import NavBar from './components/layout/NavBar';
 import Footer from './components/layout/Footer';
+import ProductDetails from './components/products/Product.Details';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <div className="container container-fluid">
           <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='/product/:id' element={<ProductDetails />} />
           </Routes>
         </div>
         <Footer />
