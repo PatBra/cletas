@@ -2,6 +2,23 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+
+
+
+
+
+.redColor {
+  color: #ff0000;
+}
+
+.greenColor {
+  color: #008000;
+}
+
+#product_image {
+  margin-top: 9rem;
+}
+
 /* Loader */
 .loader {
   display: block;
