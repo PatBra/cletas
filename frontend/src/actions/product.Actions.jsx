@@ -9,10 +9,12 @@ export const clearErrors =() => async (dispatch) => {
 }
 
 //conseguir los productos
-export const getProducts = (keyword = '', currentPage = 1) => async (dispatch) => {
+export const getProducts = (keyword = '', currentPage = 1, price) => async (dispatch) => {
     try {
+        let url = `/api/v1/products?keyword=${keyword}&page=${currentPage}&price[lte]=${price[1]}&price[gte]=${price[0]}`
         dispatch({ type:ALL_PRODUCTS_REQUEST})
-        const { data } = await axios.get(`/api/v1/products?keyword=${keyword}&page=${currentPage}`)
+        console.log(`esta es la ${url}`);
+        const { data } = await axios.get(url)
 
         dispatch({
             type:ALL_PRODUCTS_SUCCESS,

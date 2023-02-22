@@ -3,10 +3,10 @@ import React from "react";
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
-const Product = ({ product }) => {
+const Product = ({ product, col }) => {
     return (
 
-        <div className='col-sm-12 col-md-6 col-lg-3 my-3'>
+        <div className={`col-sm-12 col-md-6 col-lg-${col} my-3`}>
             <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src="https://devinci-media-prod.azureedge.net/media/amvgpag4/wilson_2022_v2.png?center=0.5,0.5&mode=max&bgcolor=FFFFFF&format=jpeg&width=1800&height=768" />
                 <Card.Body>
