@@ -1,4 +1,5 @@
 import Container from 'react-bootstrap/Container';
+import {Link} from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -19,7 +20,7 @@ const NavBar = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/home">Productos</Nav.Link>
             <Nav.Link href="#action2">Link</Nav.Link>
             <NavDropdown title="Link" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
@@ -39,7 +40,14 @@ const NavBar = () => {
             <Search />
             </div>
           {/* <Route render={(history) => <Search history={history}/>}/> */}
-          
+          <div>
+          <div className='col-12 col-md-6 mt-2 mt-md-0 text-center'>
+        <Link to='/login' className='btn ml-4 text-white' id="login_btn">Login</Link>
+
+        <span id="cart" className='ml-3 text-white'>Cart</span>
+        <span className='ml-1' id="cart_count">2</span>
+      </div>
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>

@@ -27,7 +27,7 @@ const Search = () => {
                 placeholder="Busqueda"
                 onChange={(e) => setKeyword(e.target.value)}
             />
-            <div className="input-group-append mx-4">
+            <div className="input-group-append">
                 <button id="search_btn" className="btn btn-danger">
                     <i className="fa fa-search" aria-hidden="true"></i>
                 </button>

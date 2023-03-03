@@ -10,11 +10,12 @@ const cloudinary = require('cloudinary'); */
 
 // Register a user   => /api/v1/register
 exports.registerUser = catchAsyncErrors(async (req, res, next) => {
-  /*  const result = await cloudinary.v2.uploader.upload(req.body.avatar, {
+
+  const result = await cloudinary.v2.uploader.upload(req.body.avatar, {
         folder: 'avatars',
         width: 150,
         crop: "scale"
-    })  */
+    })
     
   const { name, email, password } = req.body;
 
@@ -23,10 +24,10 @@ exports.registerUser = catchAsyncErrors(async (req, res, next) => {
     email,
     password,
     avatar: {
-      public_id: "avatar/avatar9_hyusah",
-      url: "https://res.cloudinary.com/dwutk1ovx/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1674852834/avatar/avatar9_hyusah.png",
-      /*    public_id: result.public_id,
-            url: result.secure_url  */
+      public_id: result.public_id,
+      // public_id: "avatar/avatar9_hyusah",
+      url: result.secure_url,
+      // url: "https://res.cloudinary.com/dwutk1ovx/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1674852834/avatar/avatar9_hyusah.png",
     },
   });
 

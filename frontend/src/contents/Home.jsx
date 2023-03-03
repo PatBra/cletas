@@ -18,6 +18,7 @@ const Home = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [price, setPrice] = useState([1, 1000])
     const [category, setCategory] = useState("")
+    const [rating, setRating] = useState(0)
 
     const categories = [
         "Electronics",
@@ -46,9 +47,9 @@ const Home = () => {
         if (error) {
             return alert.error(error)
         }
-        dispatch(getProducts(keyword, currentPage, price, category));
+        dispatch(getProducts(keyword, currentPage, price, category, rating));
 
-    }, [dispatch, alert, error, keyword, currentPage, price, category])
+    }, [dispatch, alert, error, keyword, currentPage, price, category, rating])
 
     function setCurrentPageNo(pageNumber) {
         setCurrentPage(pageNumber)
@@ -64,7 +65,7 @@ const Home = () => {
             {loading ? <Loader /> : (
                 <div>
                     <MetaData title={`El mega titulo`} />
-                    <div className='row jumbito'>
+                    {/* <div className='row jumbito'>
                         <div className='col-12 col-md-9 col-lg-7 col-xl-6'>
                             <div className='container-fluid py-5 mt-5 text-black-50 px-3'>
                                 <h1 className='display-5 fw-bold'>Casual y Técnico</h1>
@@ -72,10 +73,10 @@ const Home = () => {
                                 <p className='fs-5 fw-bolder'>Descubre más <i className='fa-solid fa-skull'></i></p>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                     <div>
-                        <h1 className='text-center fw-bold pt-5' id='bicicletas'>Bicicletas</h1>
+                        <h1 className='text-center fw-bold pt-5' id='productos'>Productos</h1>
                         <section id='products' className='container mt-5'>
                             <div className='row'>
 
@@ -93,7 +94,7 @@ const Home = () => {
                                                     min={1}
                                                     max={1000}
                                                     defaultValue={[1, 1000]}
-                                                    tipFormatter={value => `$${value}`}
+                                                    tipFormatter={value => `${value}`}
                                                     tipProps={{
                                                         placement: "top",
                                                         visible: true
@@ -119,6 +120,34 @@ const Home = () => {
                                                                 onClick={() => setCategory(category)}
                                                             >
                                                                 {category}
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+
+                                                filtro por rating
+                                                <hr className='my-3' />
+                                                <div className="mt-5">
+                                                    <h4 className="mb-3">
+                                                        Ratings
+                                                    </h4>
+
+                                                    <ul className="pl-0">
+                                                        {[5, 4, 3, 2, 1].map(star => (
+                                                            <li
+                                                                style={{
+                                                                    cursor: 'pointer',
+                                                                    listStyleType: 'none'
+                                                                }}
+                                                                key={star}
+                                                                onClick={() => setRating(star)}
+                                                            >
+                                                                <div className='rating-outer'>
+                                                                    <div className='rating-inner'
+                                                                        style={{
+                                                                            width: `${star * 20}%`
+                                                                        }}></div>
+                                                                </div>
                                                             </li>
                                                         ))}
                                                     </ul>
