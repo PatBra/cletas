@@ -1,0 +1,7 @@
+.jumbito {
+    background-image: url(../../public/images/bg-jumbotron-index.jpg);
+    min-height: 100vh;
+    /* minimo tendra 100, pero si el contenido es mas grande crecera lo suficiente*/
+    background-position: center;
+    background-size: cover;
+}

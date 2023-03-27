@@ -1,33 +1,42 @@
-const app = require("./app");
-const connectDatabase = require("./config/database");
+const app= require('./app')
+const connectDatabase = require('./config/database')
+const dotenv = require('dotenv')
+const cloudinary = require('cloudinary');
 
-const dotenv = require("dotenv");
-const mongoose = require('mongoose');
-mongoose.set('strictQuery', true);
 
-// Handle Uncaught exceptions 
-process.on("uncaughtException", (err) => {
+process.on("uncaughtException", err => {
   console.log(`ERROR: ${err.stack}`);
-  console.log("Servidor apagado debido a una excepcion no controlada");
+  console.log("Shutting down due to uncaught exception");
   process.exit(1);
 });
 
-//configurando el inicio del config
-dotenv.config({ path: "backend/config/config.env" });
+// config file
+//if (process.env.NODE_ENV !== "PRODUCTION")
+// require("dotenv").config({ path: "backend/config/config.env" });
+dotenv.config({path: 'backend/config/config.env'})
 
-// Conectando a la base de datos
+// dotenv.config({ path: 'backend/config/config.env' })
+
+//connectar a la database
 connectDatabase();
+
+// Cloudinary
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
 
 const server = app.listen(process.env.PORT, () => {
   console.log(
-    `Servidor iniciado en el puerto: ${process.env.PORT} en modo ${process.env.NODE_ENV} .`
+    `Server-ul s-a pornit pe PORT-ul: ${process.env.PORT} în modul de ${process.env.NODE_ENV} .`
   );
 });
 
-// Handle Unhundle
-process.on("unhandledRjection", (err) => {
-  console.log(`ERROR: ${err.message}`);
-  console.log("Servidor caido por una promesa no manejada");
+
+process.on("unhandledRejection", err => {
+  console.log(`ERROR: ${err.stack}`);
+  console.log("Shutting down the server due to Unhandled Promise rejection");
   server.close(() => {
     process.exit(1);
   });

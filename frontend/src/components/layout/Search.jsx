@@ -1,41 +1,36 @@
-import React, {
-    useState
-} from "react";
-import {useNavigate} from "react-router-dom";
+import React, { useState } from "react";
 
+const Search = ({ history }) => {
+  const [keyword, setKeyword] = useState("");
 
-const Search = () => {
-    let navigate = useNavigate();
-    const [keyword, setKeyword] = useState('');
-    const searchHandler = (e) => {
-        e.preventDefault();
-        if (keyword.trim()) {
-            navigate(`/search/${keyword}`);
-        } else {
-            navigate("/");
-        }
-    };
+  const searchHandler = e => {
+    e.preventDefault();
 
-    return (
+    if (keyword.trim()) {
+      history.push(`/search/${keyword}`);
+    } else {
+      history.push("/");
+    }
+  };
 
-        <form onSubmit={searchHandler} >
-        <div className="input-group">
-            <input
-                type="text"
-                id="search_field"
-                className="form-control"
-                placeholder="Busqueda"
-                onChange={(e) => setKeyword(e.target.value)}
-            />
-            <div className="input-group-append mx-4">
-                <button id="search_btn" className="btn btn-danger">
-                    <i className="fa fa-search" aria-hidden="true"></i>
-                </button>
-            </div>
+  return (
+    <form onSubmit={searchHandler}>
+      <div className="input-group">
+        <input
+          type="text"
+          id="search_field"
+          className="form-control"
+          placeholder="Buscar"
+          onChange={e => setKeyword(e.target.value)}
+        />
+        <div className="input-group-append">
+          <button id="search_btn" className="btn">
+            <i className="fa fa-search" aria-hidden="true"></i>
+          </button>
         </div>
+      </div>
     </form>
+  );
+};
 
-    )
-}
-
-export default Search
+export default Search;

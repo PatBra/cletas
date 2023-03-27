@@ -1,9 +1,9 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
 
 const {
-  registerUser,
-  /*loginUser,
+    registerUser,
+    loginUser,
     forgotPassword,
     resetPassword,
     getUserProfile,
@@ -13,13 +13,15 @@ const {
     allUsers,
     getUserDetails,
     updateUser,
-    deleteUser*/
-} = require("../controllers/authController");
+    deleteUser
 
-//const { isAuthenticatedUser, authorizeRoles } = require('../middlewares/auth')
+} = require('../controllers/authController');
 
-router.route("/register").post(registerUser);
-/* router.route('/login').post(loginUser);
+
+const { isAuthenticatedUser, authorizeRoles } = require('../middlewares/auth')
+
+router.route('/register').post(registerUser);
+router.route('/login').post(loginUser);
 
 router.route('/password/forgot').post(forgotPassword)
 router.route('/password/reset/:token').put(resetPassword)
@@ -34,6 +36,6 @@ router.route('/admin/users').get(isAuthenticatedUser, authorizeRoles('admin'), a
 router.route('/admin/user/:id')
     .get(isAuthenticatedUser, authorizeRoles('admin'), getUserDetails)
     .put(isAuthenticatedUser, authorizeRoles('admin'), updateUser)
-    .delete(isAuthenticatedUser, authorizeRoles('admin'), deleteUser)  */
+    .delete(isAuthenticatedUser, authorizeRoles('admin'), deleteUser)
 
 module.exports = router;

@@ -4,7 +4,7 @@ const connectDatabase = require("../config/database");
 
 const products = require("../data/products");
 
-// Configurando  dotenv 
+
 dotenv.config({ path: "backend/config/config.env" });
 
 connectDatabase();
@@ -12,10 +12,10 @@ connectDatabase();
 const seedProducts = async () => {
   try {
     await Product.deleteMany();
-    console.log("Products are deleted");
+    console.log("Los productos han sido eliminados");
 
     await Product.insertMany(products);
-    console.log("All Products are added.");
+    console.log("Todos los productos han sido agregados");
 
     process.exit();
   } catch (error) {

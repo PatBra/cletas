@@ -1,13 +1,11 @@
-import React from "react"
-import { Helmet, HelmetProvider } from 'react-helmet-async' 
+import React from 'react'
+import { Helmet } from 'react-helmet'
 
 const MetaData = ({ title }) => {
     return (
-        <HelmetProvider>
         <Helmet>
-<title>{`${title}  Hola soy un titulo`}</title>
+            <title>{`${title} - Cletas`}</title>
         </Helmet>
-        </HelmetProvider>
     )
 }
 

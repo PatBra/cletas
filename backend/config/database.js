@@ -1,18 +1,21 @@
 const mongoose = require("mongoose");
 
-//const DB_URI = "mongodb://localhost:27017/cletas";
+// const connectDatabase = () => {
+//   mongoose
+//     .connect(process.env.DB_URI, {
+//       useNewUrlParser: true,
+//       useUnifiedTopology: true,
+//       useCreateIndex: true,
+//     })
+//     .then(con => {
+//       console.log(
+//         `MongoDB Database s-a conectat cu HOST-ul: ${con.connection.host}`
+//       );
+//     });
+// };
 
-/*mongoose.connect(URI, {
-  useNewUrlParser: true,
-  useCreateIndex: true,
-});
+// module.exports = connectDatabase;
 
-const connection = mongoose.connection;
-
-connection.once("open", () => {
-  console.log("BD conectada");
-}); */
- 
 
 const connectDatabase = () => {
   mongoose
