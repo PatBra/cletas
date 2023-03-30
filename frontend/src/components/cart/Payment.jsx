@@ -99,7 +99,7 @@ const Payment = ({ history }) => {
         alert.error(result.error.message);
         document.querySelector("#pay_btn").disabled = false;
       } else {
-        // The payment is processed or not
+
         if (result.paymentIntent.status === "succeeded") {
           order.paymentInfo = {
             id: result.paymentIntent.id,
