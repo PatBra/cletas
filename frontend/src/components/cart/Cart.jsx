@@ -61,6 +61,7 @@ const Cart = ({ history }) => {
                           alt="img"
                           height="90"
                           width="115"
+                          key={item.id}
                         />
                       </div>
 
