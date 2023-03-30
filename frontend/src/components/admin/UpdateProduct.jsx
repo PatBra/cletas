@@ -29,6 +29,7 @@ const UpdateProduct = ({ match, history }) => {
     "Enduro",
     "Trail",
     "E-Bike",
+    "Carretera",
     "Gravel",
     "Accesorios",
     "Indumentaria",

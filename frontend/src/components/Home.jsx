@@ -25,6 +25,7 @@ const Home = ({ match }) => {
     "Enduro",
     "Trail",
     "E-Bike",
+    "Carretera",
     "Gravel",
     "Accesorios",
     "Indumentaria",
@@ -154,7 +155,7 @@ const Home = ({ match }) => {
                       id="reset_filter_btn"
                       onClick={resetFilters}
                     >
-                     Borrar Filtro
+                      Borrar Filtro
                     </button>
                   </div>
                 </div>

@@ -23,6 +23,7 @@ const NewProduct = ({ history }) => {
     "Enduro",
     "Trail",
     "E-Bike",
+    "Carretera",
     "Gravel",
     "Accesorios",
     "Indumentaria",

@@ -43,6 +43,7 @@ const productSchema = new mongoose.Schema({
         "Enduro",
         "Trail",
         "E-Bike",
+        "Carretera",
         "Gravel",
         "Accesorios",
         "Indumentaria",

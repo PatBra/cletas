@@ -1,0 +1,205 @@
+[
+    {
+        "_id": {
+            "$oid": "63f01e491a60afac15c0855c"
+        },
+        "name": "Canyon Speedmax",
+        "price": 11149,
+        "description": "La Speedmax CFR establece un punto de referencia completamente nuevo para las bicicletas de triatlón de clase mundial. Conducida por profesionales como Jan Frodeno, experimenta el siguiente nivel de rendimiento de triatlón por ti mismo. ",
+        "ratings": 4.8,
+        "images": [
+            {
+                "public_id": "cletas/tria_foto8_b89vv6.webp",
+                "url": "https://res.cloudinary.com/dwutk1ovx/image/upload/v1676592075/cletas/tria_foto8_b89vv6.webp",
+                "_id": {
+                    "$oid": "63f01e491a60afac15c0855d"
+                }
+            }
+        ],
+        "category": "Carretera",
+        "seller": "Cletas SA",
+        "stock": 5,
+        "numOfReviews": 12,
+        "reviews": [],
+        "createdAt": {
+            "$date": {
+                "$numberLong": "1676680777773"
+            }
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "63f01e491a60afac15c0856c"
+        },
+        "name": "Canyon Stoic 3",
+        "price": 1249,
+        "description": "Con más recorrido en la horquilla y un ángulo de conducción más relajado que la Grand Canyon, estamos hablando de nuestro modelo rígido mejor preparado a la hora de afrontar descensos empinados y técnicos",
+        "ratings": 4.0,
+        "images": [
+            {
+                "public_id": "cletas/trial_foto1_ricdds.jpg",
+                "url": "https://res.cloudinary.com/dwutk1ovx/image/upload/v1676592056/cletas/trial_foto1_ricdds.jpg",
+                "_id": {
+                    "$oid": "63f01e491a60afac15c0856d"
+                }
+            }
+        ],
+        "category": "Trail",
+        "seller": "Cletas SA",
+        "stock": 50,
+        "numOfReviews": 12,
+        "reviews": [],
+        "createdAt": {
+            "$date": {
+                "$numberLong": "1676680777780"
+            }
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "63f01e491a60afac15c0857c"
+        },
+        "name": "Canyon Pathlite 7 WMN",
+        "price": 1499,
+        "description": "La Pathlite 7 WMN, con una geometría específicamente femenina, está diseñada para que disfrutes de rodar en grandes espacios con un diseño híbrido que lo mismo te permite darte una vuelta por la ciudad que hacer viajes largos por el campo. Asfalto, gravilla o tierra: ¡la Pathlite se atreve con todo! ",
+        "ratings": 3.5,
+        "images": [
+            {
+                "public_id": "cletas/trek_foto7_zsdflx.webp",
+                "url": "https://res.cloudinary.com/dwutk1ovx/image/upload/v1676592044/cletas/trek_foto7_zsdflx.webp",
+                "_id": {
+                    "$oid": "63f01e491a60afac15c0857d"
+                }
+            }
+        ],
+        "category": "Trail",
+        "seller": "Cletas SA",
+        "stock": 50,
+        "numOfReviews": 12,
+        "reviews": [],
+        "createdAt": {
+            "$date": {
+                "$numberLong": "1676680777784"
+            }
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "63f01e491a60afac15c0858c"
+        },
+        "name": "Canyon Spectral 29 AL 5",
+        "price": 3999.99,
+        "description": "Rápida en senderos con flow y estable en secciones técnicas, la Spectral 5 puede con cualquier sendero gracias a su cuadro de aluminio, geometría progresiva y fiables componentes.",
+        "ratings": 3.0,
+        "images": [
+            {
+                "public_id": "cletas/enduro_foto8_cvddlg.webp",
+                "url": "https://res.cloudinary.com/dwutk1ovx/image/upload/v1676592030/cletas/enduro_foto8_cvddlg.webp",
+                "_id": {
+                    "$oid": "63f01e491a60afac15c0858d"
+                }
+            }
+        ],
+        "category": "Enduro",
+        "seller": "Cletas SA",
+        "stock": 10,
+        "numOfReviews": 11,
+        "reviews": [],
+        "createdAt": {
+            "$date": {
+                "$numberLong": "1676680777787"
+            }
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "63f01e491a60afac15c0858e"
+        },
+        "name": "Canyon Spectral Mullet CF 8 CLLCTV",
+        "price": 4299,
+        "description": "Con ruedas mullet y amortiguador de muelle, esta bicicleta está equipada para disfrutar de los descensos, saltar cortados y proporcionar mucha diversión en el bikepark. ",
+        "ratings": 5.0,
+        "images": [
+            {
+                "public_id": "cletas/enduro_foto7_ydel5p.webp",
+                "url": "https://res.cloudinary.com/dwutk1ovx/image/upload/v1676592030/cletas/enduro_foto7_ydel5p.webp",
+                "_id": {
+                    "$oid": "63f01e491a60afac15c0858f"
+                }
+            }
+        ],
+        "category": "Enduro",
+        "seller": "Cletas SA",
+        "stock": 50,
+        "numOfReviews": 7,
+        "reviews": [],
+        "createdAt": {
+            "$date": {
+                "$numberLong": "1676680777787"
+            }
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "63f01e491a60afac15c085ac"
+        },
+        "name": "Canyon Sender CFR 29 Underdog",
+        "price": 4199,
+        "description": "No deberías subestimar la capacidad de esta máquina. Buscando la línea perfecta o marcando el mejor tiempo, la Sender es una bicicleta de descenso diseñada para competir. Ahora con un color exclusivo y acabado prémium. ",
+        "ratings": 5.0,
+        "images": [
+            {
+                "public_id": "cletas/des_foto4_wdlm16.webp",
+                "url": "https://res.cloudinary.com/dwutk1ovx/image/upload/v1676592002/cletas/des_foto4_wdlm16.webp",
+                "_id": {
+                    "$oid": "63f01e491a60afac15c085ad"
+                }
+            }
+        ],
+        "category": "Downhill",
+        "seller": "Cletas SA",
+        "stock": 15,
+        "numOfReviews": 3,
+        "reviews": [],
+        "createdAt": {
+            "$date": {
+                "$numberLong": "1676680777793"
+            }
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "63f01e491a60afac15c085f2"
+        },
+        "name": "Bell Stratus MIPS Road Cycling Helmet ",
+        "price": 111.95,
+        "description": "Inspired by their top of the range Z20, the Bell Stratus MIPS is a feature-packed, lightweight road helmet designed to keep you cool, fast and protected on the road. ",
+        "ratings": 2.5,
+        "images": [
+            {
+                "public_id": "otros/casco_muestra_xeskmv.webp",
+                "url": "https://res.cloudinary.com/dwutk1ovx/image/upload/v1676678065/otros/casco_muestra_xeskmv.webp",
+                "_id": {
+                    "$oid": "63f01e491a60afac15c085f3"
+                }
+            }
+        ],
+        "category": "Indumentaria",
+        "seller": "Cletas SA",
+        "stock": 50,
+        "numOfReviews": 10,
+        "reviews": [],
+        "createdAt": {
+            "$date": {
+                "$numberLong": "1676680777805"
+            }
+        },
+        "__v": 0
+    }
+]
