@@ -16,7 +16,7 @@ const Range = createSliderWithTooltip(Slider.Range);
 
 const Home = ({ match }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [price, setPrice] = useState([1, 5000]);
+  const [price, setPrice] = useState([1, 50000]);
   const [category, setCategory] = useState("");
   const [rating, setRating] = useState(0);
 
@@ -60,7 +60,7 @@ const Home = ({ match }) => {
   const resetFilters = () => {
     setCategory("");
     setRating(0);
-    setPrice([1, 5000]);
+    setPrice([1, 50000]);
   };
 
   let count = productsCount;
@@ -85,11 +85,11 @@ const Home = ({ match }) => {
                     <Range
                       marks={{
                         1: `1CLP`,
-                        5000: `5000CLP`,
+                        50000: `50000CLP`,
                       }}
                       min={1}
-                      max={5000}
-                      defaultValue={[1, 5000]}
+                      max={50000}
+                      defaultValue={[1, 50000]}
                       tipFormatter={value => `${value}CLP`}
                       tipProps={{
                         placement: "top",
