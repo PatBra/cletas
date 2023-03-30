@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 import {
   ALL_PRODUCTS_REQUEST,
@@ -29,7 +29,6 @@ import {
   GET_REVIEWS_FAIL,
   DELETE_REVIEW_REQUEST,
   DELETE_REVIEW_SUCCESS,
-  DELETE_REVIEW_RESET,
   DELETE_REVIEW_FAIL,
   CLEAR_ERRORS,
 } from "../constants/productConstants";

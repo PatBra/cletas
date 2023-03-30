@@ -10,7 +10,7 @@ const Footer = () => {
                 <div className="row">
 
                     <div className="col-md-4 mx-auto mt-3">
-                    <h6 className="text-uppercase mb-4 fw-bold"><i class="fa-solid fa-bicycle fa-beat text-white"></i>  Cletas
+                    <h6 className="text-uppercase mb-4 fw-bold"><i className="fa-solid fa-bicycle fa-beat text-white"></i>  Cletas
                         </h6>
                     </div>
 

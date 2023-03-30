@@ -27,7 +27,7 @@ const Header = () => {
         <div className="col-12 col-md-3">
           <div className="navbar-brand">
             <Link to="/">
-            <i class="fa-solid fa-bicycle fa-beat text-white"></i>
+            <i className="fa-solid fa-bicycle fa-beat text-white"></i>
             </Link>
             <Link to="/" style={{ textDecoration: "none" }}>
             <span id="product" className="ml-3 text-white">

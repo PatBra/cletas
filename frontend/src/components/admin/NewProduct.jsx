@@ -32,7 +32,8 @@ const NewProduct = ({ history }) => {
   const alert = useAlert();
   const dispatch = useDispatch();
 
-  const { loading, error, success } = useSelector(state => state.newProduct);
+  // const { loading, error, success } = useSelector(state => state.newProduct);
+  const { error, success } = useSelector(state => state.newProduct);
 
   useEffect(() => {
     if (error) {
