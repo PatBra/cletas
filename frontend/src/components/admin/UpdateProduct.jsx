@@ -25,18 +25,13 @@ const UpdateProduct = ({ match, history }) => {
   const [imagesPreview, setImagesPreview] = useState([]);
 
   const categories = [
-    "Electronice",
-    "Camere",
-    "Laptopuri",
-    "Accessorii",
-    "Căști",
-    "Mâncare/Băuturi",
-    "Cărți",
-    "Haine/Pantofi",
-    "Frumusețe/Sănătate",
-    "Sport",
-    "Activități de afară",
-    "Casă",
+    "Downhill",
+    "Enduro",
+    "Trail",
+    "E-Bike",
+    "Gravel",
+    "Accesorios",
+    "Indumentaria",
   ];
 
   const alert = useAlert();

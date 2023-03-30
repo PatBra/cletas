@@ -21,18 +21,13 @@ const Home = ({ match }) => {
   const [rating, setRating] = useState(0);
 
   const categories = [
-    "Electronice",
-    "Camere",
-    "Laptopuri",
-    "Accessorii",
-    "Căști",
-    "Mâncare/Băuturi",
-    "Cărți",
-    "Haine/Pantofi",
-    "Frumusețe/Sănătate",
-    "Sport",
-    "Activități de afară",
-    "Casă",
+    "Downhill",
+    "Enduro",
+    "Trail",
+    "E-Bike",
+    "Gravel",
+    "Accesorios",
+    "Indumentaria",
   ];
 
   const alert = useAlert();
