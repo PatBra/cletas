@@ -1,7 +1,7 @@
 {
   "name": "cletas",
   "version": "1.0.0",
-  "description": "full ecommerce site using mern",
+  "description": "Sitio proyecto 5 full ecommerce",
   "main": "server.js",
   "engines": {
     "node": "14.14.0",
@@ -12,7 +12,7 @@
     "dev": "SET NODE_ENV=DEVELOPMENT& nodemon backend/server",
     "prod": "SET NODE_ENV=PRODUCTION& nodemon backend/server",
     "seeder": "node backend/utils/seeder.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
+    "data:destroy": "node backend/utils/seeder -d"
   },
   "author": "LA - PB",
   "license": "ISC",
@@ -24,7 +24,6 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-fileupload": "^1.2.0",
-    "heroku": "^7.52.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.16",
     "nodemailer": "^6.4.16",
